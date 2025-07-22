@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxmdq50xops0g"
-path="res://.godot/imported/pointer.png-1cfc1373c364efd7dde6b7804e352ca4.ctex"
+uid="uid://cn0vmqifmx5ba"
+path="res://.godot/imported/OrangePortal.png-bcb3f68691de0f6e48a73ceb17f2195d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pointer.png"
-dest_files=["res://.godot/imported/pointer.png-1cfc1373c364efd7dde6b7804e352ca4.ctex"]
+source_file="res://Sprites/OrangePortal.png"
+dest_files=["res://.godot/imported/OrangePortal.png-bcb3f68691de0f6e48a73ceb17f2195d.ctex"]
 
 [params]
 

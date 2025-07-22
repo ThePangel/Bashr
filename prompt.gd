@@ -1,5 +1,6 @@
 extends CharacterBody2D
 const bulletScene = preload("res://playerBullet.tscn")
+const portalScene = preload("res://portalBullet.tscn")
 
 const SPEED = 400.0
 const ROTSPEED = 5.0
@@ -7,6 +8,10 @@ const ROTSPEED = 5.0
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("spacebar"):
 		shoot()
+	if Input.is_action_just_pressed("W"):
+		portal(true)
+	if Input.is_action_just_pressed("S"):
+		portal(false)
 	var direction = Input.get_vector(
 		'ui_left', 'ui_right', 'ui_up', 'ui_down')
 	var rotationAxis = Input.get_axis("A", "D")
@@ -29,3 +34,10 @@ func shoot():
 	bullet.global_position = $Marker2D.global_position  
 	bullet.rotation = $Marker2D.global_rotation
 	get_tree().get_current_scene().add_child(bullet)  
+
+func portal(portalVal):
+	var portal = portalScene.instantiate() 
+	portal.global_position = $Marker2D.global_position  
+	portal.rotation = $Marker2D.global_rotation
+	get_tree().get_current_scene().add_child(portal)
+	portal.setup(portalVal)

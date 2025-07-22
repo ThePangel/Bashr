@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdhrfiulm32co"]
+
+[ext_resource type="Script" uid="uid://p5kegl8gtjqn" path="res://bluePortal.gd" id="1_vds2e"]
+[ext_resource type="Texture2D" uid="uid://d0oe0xgikxnwr" path="res://Sprites/BluePortal.png" id="1_yl263"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vds2e"]
+radius = 25.0
+height = 52.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_vds2e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 0.53)
+texture = ExtResource("1_yl263")
+offset = Vector2(-16.86, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_vds2e")
