@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2g3jkbwe0b7e"]
+
+[ext_resource type="FontFile" uid="uid://brcq3iqboltui" path="res://Fonts/PixelCode-Bold.ttf" id="1_707jk"]
+[ext_resource type="Script" uid="uid://d2viqqltbdr2h" path="res://label.gd" id="2_oc585"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 640.0
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource("1_707jk")
+theme_override_font_sizes/font_size = 32
+script = ExtResource("2_oc585")
