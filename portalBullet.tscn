@@ -4,16 +4,17 @@
 [ext_resource type="FontFile" uid="uid://d1ss0jt0wgi5u" path="res://Fonts/PixelCode-Black.ttf" id="2_bcqhe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1fcxy"]
-size = Vector2(12, 4.3125)
+size = Vector2(13, 5.15625)
 
 [node name="Area2D" type="Area2D"]
 position = Vector2(1, 1)
 script = ExtResource("1_e0888")
 
 [node name="Label" type="Label" parent="."]
-offset_top = -11.0
-offset_right = 11.0
-offset_bottom = 11.0
+offset_left = 1.0
+offset_top = -8.0
+offset_right = 12.0
+offset_bottom = 14.0
 scale = Vector2(1.085, 1.085)
 pivot_offset = Vector2(2.5, 5.5)
 theme_override_fonts/font = ExtResource("2_bcqhe")
@@ -22,5 +23,5 @@ text = "-"
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6, 0)
+position = Vector2(5, 0)
 shape = SubResource("RectangleShape2D_1fcxy")

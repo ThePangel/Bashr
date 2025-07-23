@@ -32,7 +32,7 @@ func _physics_process(_delta):
 func shoot():
 	var bullet = bulletScene.instantiate() 
 	bullet.global_position = $Marker2D.global_position  
-	bullet.rotation = $Marker2D.global_rotation
+	bullet.rotation = $Marker2D.global_rotation            
 	get_tree().get_current_scene().add_child(bullet)  
 
 func portal(portalVal):
