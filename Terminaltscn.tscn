@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://d2g3jkbwe0b7e"]
 
 [ext_resource type="FontFile" uid="uid://brcq3iqboltui" path="res://Fonts/PixelCode-Bold.ttf" id="1_707jk"]
+[ext_resource type="Script" uid="uid://c4xi1ptfrmi8k" path="res://BattleScreen.gd" id="1_xi0th"]
 [ext_resource type="Script" uid="uid://camcj0qxhps2y" path="res://health.gd" id="2_707jk"]
-[ext_resource type="PackedScene" uid="uid://64e72wbk2jhw" path="res://player.tscn" id="3_oc585"]
 
 [sub_resource type="Environment" id="Environment_xi0th"]
 background_mode = 3
@@ -11,6 +11,7 @@ glow_intensity = 1.5
 glow_bloom = 1.0
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_xi0th")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 692.0
@@ -28,5 +29,3 @@ script = ExtResource("2_707jk")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xi0th")
-
-[node name="Player" parent="." instance=ExtResource("3_oc585")]

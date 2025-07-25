@@ -8,9 +8,9 @@ func _on_body_entered(body) -> void:
 	if Global.portals["bluePortal"] != null and Global.hasTeleported != body:
 		body.global_position = Global.portals["bluePortal"].global_position
 		Global.hasTeleported = body
+		body.rotation_degrees = rad_to_deg(get_portal_normal(Global.portals["bluePortal"].global_position).angle())
 
 func _on_body_exited(body) -> void:
-	body.rotate(deg_to_rad(180))
 	Global.hasTeleported = null
 
 

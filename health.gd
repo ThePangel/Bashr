@@ -2,6 +2,7 @@ extends Label
 
 func _ready() -> void:
 	update_health_display()
+	Global.connect("health_changed", Callable(self, "update_health_display"))
 
 func update_health_display() -> void:
 	var hp = Global.health

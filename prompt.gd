@@ -34,6 +34,7 @@ func shoot():
 	bullet.global_position = $Marker2D.global_position  
 	bullet.rotation = $Marker2D.global_rotation            
 	get_tree().get_current_scene().add_child(bullet)  
+	bullet.add_to_group("bullets")
 
 func portal(portalVal):
 	var portal = portalScene.instantiate() 

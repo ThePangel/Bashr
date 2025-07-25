@@ -6,13 +6,11 @@ func _physics_process(delta):
 
 func _on_body_entered(body) -> void:
 	if Global.portals["orangePortal"] != null and Global.hasTeleported != body:
-		var vel = body.velocity
 		body.global_position = Global.portals["orangePortal"].global_position
 		Global.hasTeleported = body
-		body.velocity = -vel
-
-func _on_body_exited(body) -> void:
-	body.rotate(deg_to_rad(180))
+		body.rotation_degrees = rad_to_deg(get_portal_normal(Global.portals["orangePortal"].global_position).angle())
+	
+func _on_body_exited(_body) -> void:
 	Global.hasTeleported = null
 
 
