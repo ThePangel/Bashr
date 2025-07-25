@@ -5,12 +5,15 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body) -> void:
-	print(body.name)
-	body.rotate(deg_to_rad(180))
 	if Global.portals["orangePortal"] != null and Global.hasTeleported != body:
+		var vel = body.velocity
 		body.global_position = Global.portals["orangePortal"].global_position
 		Global.hasTeleported = body
+		body.velocity = -vel
 
+func _on_body_exited(body) -> void:
+	body.rotate(deg_to_rad(180))
+	Global.hasTeleported = null
 
 
 func _on_area_entered(area: Area2D) -> void:
