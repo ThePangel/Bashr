@@ -11,8 +11,8 @@ func _on_body_entered(body) -> void:
 		body.rotation_degrees = rad_to_deg(get_portal_normal(Global.portals["bluePortal"].global_position).angle())
 
 func _on_body_exited(body) -> void:
-	Global.hasTeleported = null
-
+	if Global.hasTeleported == body:
+		Global.hasTeleported = null
 
 func _on_area_entered(area: Area2D) -> void:
 		if area != Global.hasTeleported:

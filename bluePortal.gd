@@ -10,8 +10,9 @@ func _on_body_entered(body) -> void:
 		Global.hasTeleported = body
 		body.rotation_degrees = rad_to_deg(get_portal_normal(Global.portals["orangePortal"].global_position).angle())
 	
-func _on_body_exited(_body) -> void:
-	Global.hasTeleported = null
+func _on_body_exited(body) -> void:
+	if Global.hasTeleported == body:
+		Global.hasTeleported = null
 
 
 func _on_area_entered(area: Area2D) -> void:
