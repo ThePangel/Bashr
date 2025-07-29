@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds7n0acnxss2m"]
+
+[ext_resource type="FontFile" uid="uid://brcq3iqboltui" path="res://Fonts/PixelCode-Bold.ttf" id="1_1ydhs"]
+[ext_resource type="Script" uid="uid://b1eeedjfw7yq1" path="res://menuTerminal.gd" id="2_rr6mw"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 692.0
+offset_bottom = 491.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 21.0
+offset_right = 691.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(1, 0.552, 0, 1)
+theme_override_fonts/font = ExtResource("1_1ydhs")
+theme_override_font_sizes/font_size = 32
+text = ":\\ > Bashr!_"
+script = ExtResource("2_rr6mw")

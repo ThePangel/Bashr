@@ -5,7 +5,7 @@ const player = preload("res://player.tscn")
 func _ready() -> void:
 	var player = player.instantiate()
 	get_tree().get_current_scene().add_child(player)
-	
+	await get_tree().create_timer(5).timeout
 	for n in range(10):
 		var ls = lsEnemy.instantiate()
 		get_tree().get_current_scene().add_child(ls)
