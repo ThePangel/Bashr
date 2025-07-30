@@ -8,7 +8,7 @@ func _on_body_entered(_body: Node2D) -> void:
 func _physics_process(delta: float) -> void:
 	var player = get_parent().get_node("Player")
 	var direction = (player.global_position - global_position).normalized()
-	look_at(player.global_position.normalized())
+	look_at(player.global_position)
 	global_position += direction * delta * 200
 
    
